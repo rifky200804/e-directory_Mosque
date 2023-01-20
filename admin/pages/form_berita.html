@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en" style="height: auto;">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Form Berita</title>
+
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&amp;display=fallback">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="../plugins/fontawesome-free/css/all.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../dist/css/adminlte.min.css">
+</head>
+
+<body class="sidebar-mini" style="height: auto;">
+  <div class="wrapper">
+
+    <!-- Navbar -->
+    <!-- /.navbar -->
+
+    <!-- Main Sidebar Container -->
+    <aside class="main-sidebar sidebar-dark-primary elevation-4">
+      <!-- Brand Logo -->
+      <a href="index.html" class="brand-link">
+        <img src="../../assets/img/icon-new.png" alt="E-Directory Mosque Logo" width="70px">
+        <span class="brand-text font-weight-light">E-Mosque Depok</span>
+      </a>
+
+      <!-- Sidebar -->
+      <div class="sidebar">
+        <!-- Sidebar user panel (optional) -->
+        <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+          <div class="image">
+            <img src="../dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+          </div>
+          <div class="info">
+            <a href="#" class="d-block">Ahmad Admin</a>
+          </div>
+        </div>
+
+        <!-- search -->
+        <div class="form-inline">
+          <div class="input-group" data-widget="sidebar-search">
+            <input class="form-control form-control-sidebar" type="search" placeholder="Search..." aria-label="Search">
+            <div class="input-group-append">
+              <button class="btn btn-sidebar">
+                <i class="fas fa-search fa-fw"></i>
+              </button>
+            </div>
+          </div>
+          <div class="sidebar-search-results">
+            <div class="list-group"><a href="#" class="list-group-item">
+                <div class="search-title"><strong class="text-light"></strong>N<strong
+                    class="text-light"></strong>o<strong class="text-light"></strong> <strong
+                    class="text-light"></strong>e<strong class="text-light"></strong>l<strong
+                    class="text-light"></strong>e<strong class="text-light"></strong>m<strong
+                    class="text-light"></strong>e<strong class="text-light"></strong>n<strong
+                    class="text-light"></strong>t<strong class="text-light"></strong> <strong
+                    class="text-light"></strong>f<strong class="text-light"></strong>o<strong
+                    class="text-light"></strong>u<strong class="text-light"></strong>n<strong
+                    class="text-light"></strong>d<strong class="text-light"></strong>!<strong
+                    class="text-light"></strong></div>
+                <div class="search-path"></div>
+              </a></div>
+          </div>
+        </div>
+
+        <!-- Sidebar Menu -->
+        <nav class="mt-2">
+          <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+            <!-- Add icons to the links using the .nav-icon class
+                 with font-awesome or any other icon font library -->
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-mosque"></i>
+                <p>
+                  Masjid
+                  <i class="right fas fa-angle-left"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="data_masjid.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Data Masjid</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Tambah Masjid</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <!-- /.sidebar-menu -->
+      </div>
+      <!-- /.sidebar -->
+    </aside>
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper" style="min-height: 331px;">
+      <!-- Content Header (Page header) -->
+      <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+      <div class="content-header">
+        <div class="container">
+          <div class="row mb-2">
+            <div class="col-sm-12">
+              <h1 class="m-0">E-Directory Mosque Kota Depok</h1>
+            </div><!-- /.col -->
+          </div><!-- /.row -->
+          <div class="row">
+            <div class="col-md-10 d-flex justify-content-end">
+              <div class="form-inline">
+                <div class="input-group">
+                  <input type="search" class="form-control form-control-md" placeholder="Search...">
+                  <div class="input-group-append">
+                    <button type="submit" class="btn btn-md btn-default">
+                      <i class="fa fa-search"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-2 d-flex justify-content-center">
+              <a href="../login.html">
+                <button class="btn btn-primary" style="padding: 6px 30px;">
+                  Login
+                </button>
+              </a>
+            </div>
+          </div>
+        </div><!-- /.container-fluid -->
+      </div>
+      <!-- /.content-header -->
+
+      <!-- Main content -->
+      <div class="content">
+        <div class="container">
+          <div class="row mb-2">
+            <div class="col-sm-6">
+              <h1 class="m-0">Form Berita</h1>
+            </div>
+            <div class="col-sm-6">
+              <ol class="breadcrumb float-sm-right" style="background: none;">
+                <li class="breadcrumb-item"><a href="../../index.html">Home</a></li>
+                <li class="breadcrumb-item"><a href="index.html">Admin</a></li>
+                <li class="breadcrumb-item active">Berita</li>
+              </ol>
+            </div>
+          </div>
+          <div class="row">
+            <form style="width: 100%;">
+              <div class="form-group row">
+                <label for="" class="col-4 col-form-label">Nama Masjid</label>
+                <div class="col-8">
+                  <input id="" name="" placeholder="masukan nama masjid" type="text" class="form-control">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="text" class="col-4 col-form-label">Judul Berita</label>
+                <div class="col-8">
+                  <input id="text" name="text" type="text" class="form-control">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="textarea" class="col-4 col-form-label">Isi Berita</label>
+                <div class="col-8">
+                  <textarea id="textarea" name="textarea" cols="40" rows="5" class="form-control"></textarea>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="text1" class="col-4 col-form-label">Penulis</label>
+                <div class="col-8">
+                  <input id="text1" name="text1" type="text" class="form-control">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="text2" class="col-4 col-form-label">Tanggal Terbit</label>
+                <div class="col-8">
+                  <input id="text2" name="text2" placeholder="DD/MM/YYYY" type="text" class="form-control">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-4">Status Berita</label>
+                <div class="col-8">
+                  <div class="custom-control custom-radio custom-control-inline">
+                    <input name="radio" id="radio_0" type="radio" class="custom-control-input" value="draft">
+                    <label for="radio_0" class="custom-control-label">Draft</label>
+                  </div>
+                  <div class="custom-control custom-radio custom-control-inline">
+                    <input name="radio" id="radio_1" type="radio" class="custom-control-input" value="submit">
+                    <label for="radio_1" class="custom-control-label">Submit</label>
+                  </div>
+                  <div class="custom-control custom-radio custom-control-inline">
+                    <input name="radio" id="radio_2" type="radio" class="custom-control-input" value="review">
+                    <label for="radio_2" class="custom-control-label">Review</label>
+                  </div>
+                  <div class="custom-control custom-radio custom-control-inline">
+                    <input name="radio" id="radio_3" type="radio" class="custom-control-input" value="reject">
+                    <label for="radio_3" class="custom-control-label">Reject</label>
+                  </div>
+                  <div class="custom-control custom-radio custom-control-inline">
+                    <input name="radio" id="radio_4" type="radio" class="custom-control-input" value="approve">
+                    <label for="radio_4" class="custom-control-label">Approve</label>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group row">
+                <div class="offset-4 col-8">
+                  <button name="simpan" type="submit" class="btn btn-primary">Simpan</button>
+                  <button name="update" type="submit" class="btn btn-success">Update</button>
+                  <button name="hapus" type="submit" class="btn btn-danger">Hapus</button>
+                </div>
+              </div>
+            </form>
+
+          </div>
+          <!-- /.row -->
+        </div><!-- /.container-fluid -->
+      </div>
+      <!-- /.content -->
+    </div>
+    <!-- /.content-wrapper -->
+
+    <!-- Control Sidebar -->
+    <aside class="control-sidebar control-sidebar-dark" style="display: none;">
+      <!-- Control sidebar content goes here -->
+      <!-- <div class="p-3">
+                <h5>Title</h5>
+                <p>Sidebar content</p>
+            </div> -->
+    </aside>
+    <!-- /.control-sidebar -->
+
+    <!-- Main Footer -->
+    <footer class="main-footer">
+      <!-- To the right -->
+      <div class="float-right d-none d-sm-inline">
+        <!-- Anything you want -->
+      </div>
+      <!-- Default to the left -->
+      <strong>Develop By <a href="https://adminlte.io">Kelompok 5</a> STT-NF @2023</strong>
+    </footer>
+    <div id="sidebar-overlay"></div>
+  </div>
+  <!-- ./wrapper -->
+
+  <!-- REQUIRED SCRIPTS -->
+
+  <!-- jQuery -->
+  <script src="../plugins/jquery/jquery.min.js"></script>
+  <!-- Bootstrap 4 -->
+  <script src="../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- AdminLTE App -->
+  <script src="../dist/js/adminlte.min.js"></script>
+
+
+</body>
+
+</html>
