@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Admin</title>
+    <title>Daftar Masjid</title>
 
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet"
@@ -44,7 +44,7 @@
                 <!-- search -->
                 <div class="form-inline">
                     <div class="input-group" data-widget="sidebar-search">
-                      <input class="form-control form-control-sidebar" type="search" placeholder="Search..." aria-label="Search">
+                      <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
                       <div class="input-group-append">
                         <button class="btn btn-sidebar">
                           <i class="fas fa-search fa-fw"></i>
@@ -83,8 +83,8 @@
                             </ul>
                         </li>
                         
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
+                        <li class="nav-item menu-open">
+                            <a href="#" class="nav-link active">
                                 <i class="nav-icon fas fa-newspaper"></i>
                                 <p>
                                     Berita
@@ -92,8 +92,8 @@
                                 </p>
                             </a>
                             <ul class="nav nav-treeview">
-                                <li class="nav-item">
-                                    <a href="data_berita.html" class="nav-link">
+                                <li class="nav-item menu-open">
+                                    <a href="data_berita.html" class="nav-link active">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Data Berita</p>
                                     </a>
@@ -117,7 +117,7 @@
         <div class="content-wrapper" style="min-height: 331px;">
             <!-- Content Header (Page header) -->
             <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
-            <div class="content-header">
+            <div class="content-header mb-5">
                 <div class="container">
                     <div class="row mb-2">
                         <div class="col-sm-12">
@@ -145,27 +145,63 @@
                             </a>
                         </div>
                     </div>
-                </div><!-- /.container-fluid -->
+                </div><!-- /.container -->
             </div>
             <!-- /.content-header -->
 
             <!-- Main content -->
             <div class="content">
                 <div class="container">
-                    <!-- <div class="row mb-2">
+                    <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1 class="m-0">Daftar Masjid</h1>
+                            <h1 class="m-0">Daftar Berita</h1>
                         </div>
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right" style="background: none;">
                                 <li class="breadcrumb-item"><a href="../../index.html">Home</a></li>
                                 <li class="breadcrumb-item"><a href="index.html">Admin</a></li>
-                                <li class="breadcrumb-item active">Kelola Masjid</li>
+                                <li class="breadcrumb-item active">Kelola Berita</li>
                             </ol>
                         </div>
-                    </div> -->
+                    </div>
+                    <div class="row mb-4">
+                        <a href="">
+                            <button class="btn btn-md btn-success" style="padding:8px 30px;">Tambah</button>
+                        </a>
+                    </div>
+
+                    <div class="row mb-2">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>No</th>
+                                    <th>Tanggal</th>
+                                    <th>Judul Berita</th>
+                                    <th>Masjid</th>
+                                    <th>Penulis</th>
+                                    <th>Status</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>20 Februari 2022</td>
+                                    <td>Sholat Jumat Bersama</td>
+                                    <td>Muhammad Alpian</td>
+                                    <td>-</td>
+                                    <td>Draft</td>
+                                    <td>
+                                        <a href="">Detail</a> | 
+                                        <a href="">Edit</a> | 
+                                        <a href="">Hapus</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                     <!-- /.row -->
-                </div><!-- /.container-fluid -->
+                </div><!-- /.container -->
             </div>
             <!-- /.content -->
         </div>
