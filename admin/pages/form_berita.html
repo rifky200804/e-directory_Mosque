@@ -193,58 +193,58 @@
             </div>
           </div>
           <div class="row">
-            <form style="width: 100%;">
+            <form style="width: 100%;" id="form_berita">
               <div class="form-group row">
                 <label for="" class="col-4 col-form-label">Nama Masjid</label>
                 <div class="col-8">
-                  <input id="" name="" placeholder="masukan nama masjid" type="text" class="form-control">
+                  <input id="" name="" placeholder="masukan nama masjid" type="text" class="form-control" required>
                 </div>
               </div>
               <div class="form-group row">
                 <label for="text" class="col-4 col-form-label">Judul Berita</label>
                 <div class="col-8">
-                  <input id="text" name="text" type="text" class="form-control">
+                  <input id="text" name="text" type="text" placeholder="masukan Judul Berita" class="form-control" required>
                 </div>
               </div>
               <div class="form-group row">
                 <label for="textarea" class="col-4 col-form-label">Isi Berita</label>
                 <div class="col-8">
-                  <textarea id="textarea" name="textarea" cols="40" rows="5" class="form-control"></textarea>
+                  <textarea id="textarea" name="textarea" cols="40" rows="5" class="form-control"required ></textarea>
                 </div>
               </div>
               <div class="form-group row">
                 <label for="text1" class="col-4 col-form-label">Penulis</label>
                 <div class="col-8">
-                  <input id="text1" name="text1" type="text" class="form-control">
+                  <input id="text1" name="penulis" type="text" class="form-control" required>
                 </div>
               </div>
               <div class="form-group row">
                 <label for="text2" class="col-4 col-form-label">Tanggal Terbit</label>
                 <div class="col-8">
-                  <input id="text2" name="text2" placeholder="DD/MM/YYYY" type="text" class="form-control">
+                  <input id="date" name="tanggal" placeholder="DD/MM/YYYY" type="date" class="form-control" required>
                 </div>
               </div>
               <div class="form-group row">
                 <label class="col-4">Status Berita</label>
                 <div class="col-8">
                   <div class="custom-control custom-radio custom-control-inline">
-                    <input name="radio" id="radio_0" type="radio" class="custom-control-input" value="draft">
+                    <input name="status" id="radio_0" type="radio" class="custom-control-input" value="draft" required>
                     <label for="radio_0" class="custom-control-label">Draft</label>
                   </div>
                   <div class="custom-control custom-radio custom-control-inline">
-                    <input name="radio" id="radio_1" type="radio" class="custom-control-input" value="submit">
+                    <input name="status" id="radio_1" type="radio" class="custom-control-input" value="submit" required>
                     <label for="radio_1" class="custom-control-label">Submit</label>
                   </div>
                   <div class="custom-control custom-radio custom-control-inline">
-                    <input name="radio" id="radio_2" type="radio" class="custom-control-input" value="review">
+                    <input name="status" id="radio_2" type="radio" class="custom-control-input" value="review" required>
                     <label for="radio_2" class="custom-control-label">Review</label>
                   </div>
                   <div class="custom-control custom-radio custom-control-inline">
-                    <input name="radio" id="radio_3" type="radio" class="custom-control-input" value="reject">
+                    <input name="status" id="radio_3" type="radio" class="custom-control-input" value="reject" required> 
                     <label for="radio_3" class="custom-control-label">Reject</label>
                   </div>
                   <div class="custom-control custom-radio custom-control-inline">
-                    <input name="radio" id="radio_4" type="radio" class="custom-control-input" value="approve">
+                    <input name="status" id="radio_4" type="radio" class="custom-control-input" value="approve" required>
                     <label for="radio_4" class="custom-control-label">Approve</label>
                   </div>
                 </div>
@@ -253,7 +253,7 @@
                 <div class="offset-4 col-8">
                   <button name="simpan" type="submit" class="btn btn-primary">Simpan</button>
                   <button name="update" type="submit" class="btn btn-success">Update</button>
-                  <button name="hapus" type="submit" class="btn btn-danger">Hapus</button>
+                  <button name="hapus" type="reset" class="btn btn-danger">Hapus</button>
                 </div>
               </div>
             </form>

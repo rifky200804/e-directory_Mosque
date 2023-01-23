@@ -191,18 +191,18 @@
                         </div>
                     </div>
                     <div class="row mb-2">
-                        <form style="width:100%">
+                        <form style="width:100%" id="form_masjid">
                             <div class="form-group row">
                                 <label for="Nama Masjid" class="col-4 col-form-label">Nama Masjid</label>
                                 <div class="col-8">
-                                    <input id="Nama Masjid" name="Nama Masjid" placeholder="masukan nama masjid"
+                                    <input id="Nama Masjid" name="Nama Masjid" placeholder="masukan nama masjid" required
                                         type="text" class="form-control">
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <label for="Kecamatan" class="col-4 col-form-label">Kecamatan</label>
                                 <div class="col-3">
-                                    <select id="Kecamatan" name="Kecamatan" class="custom-select">
+                                    <select id="Kecamatan" name="Kecamatan" class="custom-select" required>
                                         <option value="beji">Beji</option>
                                         <option value="pancoran mas">Pancoran Mas</option>
                                         <option value="cipayung">Cipayung</option>
@@ -214,7 +214,7 @@
                                 </div>
                                 <label for="Kelurahan" class="col-2 col-form-label">Kelurahan</label>
                                 <div class="col-3">
-                                    <select id="Kelurahan" name="Kelurahan" class="custom-select"
+                                    <select id="Kelurahan" name="Kelurahan" class="custom-select" required
                                         aria-describedby="KelurahanHelpBlock">
                                         <option value="beji">Beji</option>
                                         <option value="cipayung">Cipayung</option>
@@ -229,34 +229,34 @@
                             <div class="form-group row">
                                 <label for="" class="col-4 col-form-label">Deskripsi fasilitas masjid</label>
                                 <div class="col-8">
-                                    <textarea id="" name="" cols="40" rows="5" class="form-control"></textarea>
+                                    <textarea id="" name="fasilitas" cols="40" rows="5" class="form-control" required></textarea>
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <label for="Nama pengurus DKM" class="col-4 col-form-label">Nama pengurus DKM</label>
                                 <div class="col-8">
                                     <input id="Nama pengurus DKM" name="Nama pengurus DKM"
-                                        placeholder="masukan nama pengurus DKM" type="text" class="form-control">
+                                        placeholder="masukan nama pengurus DKM" type="text" class="form-control" required >
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <label for="No HP/Telpon" class="col-4 col-form-label">No HP/Telpon</label>
                                 <div class="col-8">
                                     <input id="No HP/Telpon" name="No HP/Telpon" placeholder="masukan No HP/Telpon"
-                                        type="text" class="form-control">
+                                        type="text" class="form-control" required>
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <label for="Email" class="col-4 col-form-label">Email</label>
                                 <div class="col-8">
-                                    <input id="Email" name="Email" placeholder="masukan alamat email" type="text"
+                                    <input id="Email" name="Email" placeholder="masukan alamat email" type="text" required
                                         class="form-control">
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <label for="Alamat Web" class="col-4 col-form-label">Alamat Web</label>
                                 <div class="col-8">
-                                    <input id="Alamat Web" name="Alamat Web" placeholder="masukan alamat web"
+                                    <input id="Alamat Web" name="Alamat Web" placeholder="masukan alamat web" required
                                         type="text" class="form-control">
                                 </div>
                             </div>
@@ -271,15 +271,15 @@
                                 <label for="Latitude, Longtitude" class="col-4 col-form-label">Latitude,
                                     Longtitude</label>
                                 <div class="col-8">
-                                    <input id="Latitude, Longtitude" name="Latitude, Longtitude" type="text"
+                                    <input id="Latitude, Longtitude" name="Latitude, Longtitude" type="text" required
                                         class="form-control">
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <div class="offset-4 col-8">
                                     <button name="simpan" type="submit" class="btn btn-primary">Simpan</button>
-                                    <button name="update" type="submit" class="btn btn-success">Update</button>
-                                    <button name="hapus" type="submit" class="btn btn-danger">Hapus</button>
+                                    <button name="update" type="button" class="btn btn-success">Update</button>
+                                    <button name="hapus" type="reset" class="btn btn-danger">Hapus</button>
                                 </div>
                             </div>
                         </form>
@@ -324,7 +324,14 @@
     <!-- AdminLTE App -->
     <script src="../dist/js/adminlte.min.js"></script>
 
+    <script>
+        let form = document.getElementById('form_masjid')
 
+        form.addEventListener("submit", ()=>{
+            alert('Add Data Successfully')
+            window.location = 'data_masjid.html'
+        })
+    </script>
 </body>
 
 </html>

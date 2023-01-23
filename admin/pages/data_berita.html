@@ -178,7 +178,7 @@
                         </div>
                     </div>
                     <div class="row mb-4">
-                        <a href="">
+                        <a href="form_berita.html">
                             <button class="btn btn-md btn-success" style="padding:8px 30px;">Tambah</button>
                         </a>
                     </div>
@@ -296,7 +296,14 @@
     <!-- AdminLTE App -->
     <script src="../dist/js/adminlte.min.js"></script>
 
+    <script>
+         let form = document.getElementById('form_berita')
 
+        form.addEventListener("submit", ()=>{
+            alert('Add Data Successfully')
+            window.location = 'data_berita.html'
+        })
+    </script>
 </body>
 
 </html>

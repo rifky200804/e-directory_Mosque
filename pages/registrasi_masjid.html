@@ -89,11 +89,11 @@
         </div>
       </section>
       <section class="form">
-        <form>
+        <form id="daftar">
           <div class="form-group row">
             <label for="Nama Masjid" class="col-4 col-form-label">Nama Masjid</label>
             <div class="col-8">
-              <input id="Nama Masjid" name="Nama Masjid" placeholder="masukan nama masjid" type="text" required
+              <input id="Nama Masjid" name="nama_masjid" placeholder="masukan nama masjid" type="text" required
                 class="form-control">
             </div>
           </div>
@@ -172,7 +172,7 @@
           </div>
           <div class="form-group row mt-3">
             <div class="offset-4 col-8">
-              <button name="Daftar" type="button" id="daftar" class="btn btn-primary">Daftar</button>
+              <button name="Daftar" type="submit" class="btn btn-primary">Daftar</button>
               <button name="Batal" type="reset" class="btn btn-danger">Batal</button>
 
             </div>
@@ -221,9 +221,9 @@
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
     <script>
-      let btnDaftar = document.getElementById('daftar')
+      let daftar = document.getElementById('daftar')
 
-      btnDaftar.addEventListener('click',()=>{
+      daftar.addEventListener('submit',()=>{
         alert('Success Registrasi')
         window.location = 'registrasi_masjid.html'
       })
