@@ -54,7 +54,7 @@
     <div class="container d-flex align-items-center">
 
       <div id="logo" class="me-auto">
-        <a href="index.html"><img src="../assets/img/logo-nav-new.png" alt=""></a>
+        <a href="../index.html"><img src="../assets/img/logo-nav-new.png" alt=""></a>
         <!-- Uncomment below if you prefer to use a text image -->
         <!--<h1><a href="#hero">Bell</a></h1>-->
       </div>
@@ -93,14 +93,14 @@
           <div class="form-group row">
             <label for="Nama Masjid" class="col-4 col-form-label">Nama Masjid</label>
             <div class="col-8">
-              <input id="Nama Masjid" name="Nama Masjid" placeholder="masukan nama masjid" type="text"
+              <input id="Nama Masjid" name="Nama Masjid" placeholder="masukan nama masjid" type="text" required
                 class="form-control">
             </div>
           </div>
           <div class="form-group row">
             <label for="Kecamatan" class="col-4 col-form-label">Kecamatan</label>
             <div class="col-3">
-                <select id="Kecamatan" name="Kecamatan" class="custom-select">
+                <select id="Kecamatan" name="Kecamatan" class="custom-select" required>
                     <option value="beji">Beji</option>
                     <option value="pancoran mas">Pancoran Mas</option>
                     <option value="cipayung">Cipayung</option>
@@ -112,7 +112,7 @@
             </div>
             <label for="Kelurahan" class="col-2 col-form-label">Kelurahan</label>
             <div class="col-3">
-                <select id="Kelurahan" name="Kelurahan" class="custom-select"
+                <select id="Kelurahan" name="Kelurahan" class="custom-select" required
                     aria-describedby="KelurahanHelpBlock">
                     <option value="beji">Beji</option>
                     <option value="cipayung">Cipayung</option>
@@ -127,7 +127,7 @@
           <div class="form-group row">
             <label for="" class="col-4 col-form-label">Deskripsi fasilitas masjid</label>
             <div class="col-8">
-              <textarea id="" name="" cols="40" rows="5" class="form-control"></textarea>
+              <textarea id="" name="" cols="40" rows="5" class="form-control" required></textarea>
             </div>
           </div>
           <div class="form-group row">
@@ -140,40 +140,40 @@
           <div class="form-group row">
             <label for="No HP/Telpon" class="col-4 col-form-label">No HP/Telpon</label>
             <div class="col-8">
-              <input id="No HP/Telpon" name="No HP/Telpon" placeholder="masukan No HP/Telpon" type="text"
+              <input id="No HP/Telpon" name="No HP/Telpon" placeholder="masukan No HP/Telpon" type="text" required
                 class="form-control">
             </div>
           </div>
           <div class="form-group row">
             <label for="Email" class="col-4 col-form-label">Email</label>
             <div class="col-8">
-              <input id="Email" name="Email" placeholder="masukan alamat email" type="text" class="form-control">
+              <input id="Email" name="Email" placeholder="masukan alamat email" type="text" class="form-control" required>
             </div>
           </div>
           <div class="form-group row">
             <label for="Alamat Web" class="col-4 col-form-label">Alamat Web</label>
             <div class="col-8">
-              <input id="Alamat Web" name="Alamat Web" placeholder="masukan alamat web" type="text"
+              <input id="Alamat Web" name="Alamat Web" placeholder="masukan alamat web" type="text" required
                 class="form-control">
             </div>
           </div>
           <div class="form-group row">
             <label for="Alamat Lengkap" class="col-4 col-form-label">Alamat Lengkap</label>
             <div class="col-8">
-              <input id="Alamat Lengkap" name="Alamat Lengkap" placeholder="masukan alamat lengkap" type="text"
+              <input id="Alamat Lengkap" name="Alamat Lengkap" placeholder="masukan alamat lengkap" type="text" required
                 class="form-control">
             </div>
           </div>
           <div class="form-group row">
             <label for="Latitude, Longtitude" class="col-4 col-form-label">Latitude, Longtitude</label>
             <div class="col-8">
-              <input id="Latitude, Longtitude" name="Latitude, Longtitude" type="text" class="form-control">
+              <input id="Latitude, Longtitude" name="Latitude, Longtitude" type="text" class="form-control" required>
             </div>
           </div>
           <div class="form-group row mt-3">
             <div class="offset-4 col-8">
-              <button name="Daftar" type="submit" class="btn btn-primary">Daftar</button>
-              <button name="Batal" type="submit" class="btn btn-danger">Batal</button>
+              <button name="Daftar" type="button" id="daftar" class="btn btn-primary">Daftar</button>
+              <button name="Batal" type="reset" class="btn btn-danger">Batal</button>
 
             </div>
           </div>
@@ -220,7 +220,14 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+    <script>
+      let btnDaftar = document.getElementById('daftar')
 
+      btnDaftar.addEventListener('click',()=>{
+        alert('Success Registrasi')
+        window.location = 'registrasi_masjid.html'
+      })
+    </script>
 </body>
 
 </html>

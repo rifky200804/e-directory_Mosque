@@ -27,9 +27,9 @@
                     <p class="login-box-msg">E-Directory Mosque</p>
                 </div>
 
-                <form action="registrasi.html" method="post">
+                <form action="" method="post">
                     <div class="input-group mb-3">
-                        <input type="name" class="form-control" placeholder="Nama Lengkap">
+                        <input type="text" class="form-control" id="name" placeholder="Nama Lengkap">
                         <div class="input-group-append">
                             <div class="input-group-text">
                                 <span class="fas fa-user"></span>
@@ -38,7 +38,7 @@
                     </div>
 
                     <div class="input-group mb-3">
-                        <input type="email" class="form-control" placeholder="Email">
+                        <input type="email" class="form-control" id="email" placeholder="Email">
                         <div class="input-group-append">
                             <div class="input-group-text">
                                 <span class="fas fa-envelope"></span>
@@ -47,7 +47,7 @@
                     </div>
 
                     <div class="input-group mb-3">
-                        <input type="username" class="form-control" placeholder="Username">
+                        <input type="text" class="form-control" id="username" placeholder="Username" required>
                         <div class="input-group-append">
                             <div class="input-group-text">
                                 <span class="fas fa-user"></span>
@@ -55,7 +55,7 @@
                         </div>
                     </div>
                     <div class="input-group mb-3">
-                        <input type="password" class="form-control" placeholder="Password">
+                        <input type="password" class="form-control" id="password" placeholder="Password" required>
                         <div class="input-group-append">
                             <div class="input-group-text">
                                 <span class="fas fa-lock"></span>
@@ -63,7 +63,7 @@
                         </div>
                     </div>
                     <div class="input-group mb-3">
-                        <input type="password" class="form-control" placeholder="cek password">
+                        <input type="password" class="form-control" id="confirm_password" placeholder="cek password" required>
                         <div class="input-group-append">
                             <div class="input-group-text">
                                 <span class="fas fa-lock"></span>
@@ -73,7 +73,7 @@
                     <div class="row">
                         <!-- /.col -->
                         <div class="col-12">
-                            <button type="submit" class="btn btn-primary btn-block">Register</button>
+                            <button type="button" id="register" class="btn btn-primary btn-block">Register</button>
                         </div>
                         <!-- /.col -->
                     </div>
@@ -98,6 +98,70 @@
     <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
     <!-- AdminLTE App -->
     <script src="dist/js/adminlte.min.js"></script>
+
+    <script>
+        let btnRegister = document.getElementById('register')
+
+
+        let name = document.getElementById('name')
+        
+        let email = document.getElementById('email')
+        let username = document.getElementById('username')
+        let password = document.getElementById('password')
+        let confirmPassword = document.getElementById('confirm_password')
+
+        btnRegister.addEventListener("click",() => {
+            register()
+        })
+
+        function register(){
+            let request = {}
+
+            request.name = name.value
+            request.email = email.value
+            request.username = username.value
+            request.password = password.value
+            request.confirmPassword = confirmPassword.value
+            let checkValiationData = checkValidation(request)
+            if(checkValiationData){
+                if(request.password == request.confirmPassword){
+                    alert('Success Register')
+                    let url = 'pages/index.html'
+                    window.location = url
+                }else{
+                    confirmPassword.setAttribute("class","form-control error-border")
+                    alert('password confirmation failed')
+                }
+            }else{
+                alert("Field is Required")
+            }
+        }
+
+        function checkValidation(request){
+            console.log(request);
+            if(request.name == '' || request.username == '' || request.email == '' || request.password == '' || request.confirmPassword == ''){
+                if(request.name == ''){
+                    console.log(123)
+                    name.setAttribute("class","form-control error-border")
+                }
+                if(request.email == ''){
+                    email.setAttribute("class","form-control error-border")
+                }
+                if(request.username == ''){
+                    username.setAttribute("class","form-control error-border")
+                }
+                if(request.password == ''){
+                    password.setAttribute("class","form-control error-border")
+                }
+                if(request.confirmPassword == ''){
+                    confirmPassword.setAttribute("class","form-control error-border")
+                }
+                return false
+            }else{
+                return true
+            }
+        }
+    </script>
 
 
 </body>
